@@ -27,7 +27,7 @@ body{padding:0;background:#f3f4f8}
 #u4ts-root button:focus-visible,#u4ts-root input:focus-visible,#u4ts-root select:focus-visible,#u4ts-root textarea:focus-visible{outline:3px solid #006c82!important;outline-offset:3px!important}
 #u4ts-root .u4ts-gnav{margin-top:12px!important;padding:10px 0 0!important;background:#fff!important;position:sticky!important;bottom:0!important;z-index:3!important}
 #u4ts-root #u4ts-restart{font-size:12px!important}
-#u4ts-root .u4ts-formgrid{grid-template-columns:1fr!important;padding:12px!important}
+#u4ts-root .u4ts-formgrid{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)!important;padding:12px!important}
 #u4ts-root .u4ts-field{margin-bottom:9px!important}
 #u4ts-root .u4ts-field textarea{min-height:85px!important}
 #u4ts-root .u4ts-formbar{padding:8px 12px!important}
@@ -168,3 +168,9 @@ body{padding:0;background:#f3f4f8}
  #u4ts-root .u4ts-pager .u4ts-pagecount{order:-1!important;flex-basis:100%!important;text-align:center!important}
  #u4ts-root .u4ts-gnav{justify-content:center!important}
 }
+/* Preserve the familiar Teams assignment editor, including its toolbar. */
+#u4ts-root [data-screen="3"] .u4ts-taskcard{padding:10px 14px!important;line-height:1.65!important;margin-bottom:12px!important;border-top:1px solid #c5ced8!important;border-right:4px solid #286586!important}
+#u4ts-root [data-screen="3"] .u4ts-taskcard strong{font-size:15px!important;margin:0 0 4px!important}
+#u4ts-root [data-screen="3"] .u4ts-formbar{display:flex!important;justify-content:space-between!important;align-items:center!important;background:#f6f6fa!important}
+#u4ts-root [data-screen="3"] .u4ts-form{border-top:1px solid #b9bbc9!important}
+@media(max-width:650px){#u4ts-root .u4ts-formgrid{grid-template-columns:1fr!important}}
