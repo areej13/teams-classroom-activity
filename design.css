@@ -174,3 +174,34 @@ body{padding:0;background:#f3f4f8}
 #u4ts-root [data-screen="3"] .u4ts-formbar{display:flex!important;justify-content:space-between!important;align-items:center!important;background:#f6f6fa!important}
 #u4ts-root [data-screen="3"] .u4ts-form{border-top:1px solid #b9bbc9!important}
 @media(max-width:650px){#u4ts-root .u4ts-formgrid{grid-template-columns:1fr!important}}
+
+/* Every question and all its choices are visible together; no internal pages. */
+#u4ts-root .u4ts-task h3{font-size:20px!important;font-weight:800!important;color:#24204b!important}
+#u4ts-root .u4ts-task{background:#e9e6fa!important;border:1px solid #b5addb!important;border-right:5px solid #4843a8!important}
+#u4ts-root .u4ts-task p{font-size:15px!important;color:#383447!important}
+#u4ts-root .u4ts-question-label,#u4ts-root .u4ts-answerbox>p{font-size:17px!important;font-weight:700!important;line-height:1.7!important;background:#e9e6fa!important;color:#29214e!important;padding:10px 12px!important;border-right:4px solid #4843a8!important;border-radius:7px!important}
+#u4ts-root .u4ts-pick,#u4ts-root .u4ts-chip{font-size:15px!important;color:#26232e!important;border-color:#787588!important;line-height:1.65!important}
+#u4ts-root .u4ts-pick[aria-pressed="true"],#u4ts-root .u4ts-chip[aria-pressed="true"]{background:#ded9f8!important;color:#2c2066!important}
+#u4ts-root .u4ts-feedback .u4ts-opts[data-single="act"]{display:flex!important;flex-wrap:wrap!important}
+#u4ts-root .u4ts-feedback .u4ts-opts[data-single="act"] .u4ts-chip{width:auto!important;flex:1 1 140px!important}
+#u4ts-root .u4ts-supportpair{display:grid!important;grid-template-columns:1fr 1fr!important;gap:14px!important;align-items:start!important}
+#u4ts-root .u4ts-supportstack{display:block!important;border:1px solid #c9c7d6!important;border-radius:10px!important;background:#fff!important;overflow:hidden!important}
+#u4ts-root .u4ts-supportstack .u4ts-context{padding:12px!important;border:0!important;border-bottom:1px solid #c9c7d6!important;border-radius:0!important;background:#eaf0f6!important}
+#u4ts-root .u4ts-supportstack .u4ts-scenario{background:transparent!important;border:0!important;padding:0!important;margin:0!important;color:#263d52!important;font-size:16px!important;line-height:1.65!important}
+#u4ts-root .u4ts-supportstack .u4ts-scenario strong{display:block!important;margin-bottom:6px!important;font-size:17px!important}
+#u4ts-root .u4ts-supportstack .u4ts-answerpanel{border:0!important;border-radius:0!important;padding:12px!important}
+#u4ts-root .u4ts-supportstack .u4ts-picks{grid-template-columns:1fr!important}
+#u4ts-root .u4ts-ins .u4ts-rows{grid-template-columns:1fr 1fr!important;gap:12px!important;padding:12px!important}
+#u4ts-root .u4ts-ins .u4ts-row{display:block!important;border:1px solid #c9c7d6!important;border-radius:10px!important;overflow:hidden!important;background:#fff!important}
+#u4ts-root .u4ts-inscard{border:0!important;border-top:4px solid var(--metric)!important;border-radius:0!important;padding:10px 12px!important;box-shadow:none!important}
+#u4ts-root .u4ts-inscard h4{margin-bottom:5px!important}
+#u4ts-root .u4ts-num{float:right!important;margin-left:12px!important}
+#u4ts-root .u4ts-num strong{font-size:27px!important}
+#u4ts-root .u4ts-inscard svg{width:calc(100% - 100px)!important;height:58px!important;margin:0!important}
+#u4ts-root .u4ts-inscard p{clear:both!important;font-size:14px!important;line-height:1.6!important;min-height:44px!important}
+#u4ts-root .u4ts-answerbox{border:0!important;border-top:1px solid #d4d0e4!important;border-radius:0!important;padding:10px!important}
+#u4ts-root .u4ts-answerbox::before{display:none!important}
+#u4ts-root .u4ts-answerbox .u4ts-opts{grid-template-columns:1fr 1fr!important}
+#u4ts-root .u4ts-answerbox>p{font-size:16px!important;padding:7px 9px!important;margin-bottom:9px!important}
+#u4ts-root .u4ts-answerbox .u4ts-chip{font-size:14px!important;padding:7px 9px!important}
+@media(max-width:760px){#u4ts-root .u4ts-supportpair,#u4ts-root .u4ts-ins .u4ts-rows{grid-template-columns:1fr!important}}
