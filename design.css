@@ -98,3 +98,73 @@ body{padding:0;background:#f3f4f8}
  #u4ts-root .u4ts-gnav div{gap:5px!important}
  #u4ts-root #u4ts-restart{padding:7px!important}
 }
+
+/* Consistent context, questions, choices and vector cues on every screen. */
+#u4ts-root .u4ts-vector{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:none!important;width:36px!important;height:36px!important;background:#eeedf9!important;border-radius:9px!important;color:#4843a8!important}
+#u4ts-root .u4ts-vector svg{width:23px!important;height:23px!important}
+#u4ts-root .u4ts-panel-label{font-size:13px!important;font-weight:700!important;color:#575166!important;margin-bottom:10px!important}
+#u4ts-root .u4ts-context,#u4ts-root .u4ts-routepanel,#u4ts-root .u4ts-answerpanel,#u4ts-root .u4ts-feedback,#u4ts-root .u4ts-orderanswer{padding:14px!important;border:1px solid #d1d3de!important;border-radius:10px!important;background:#fff!important;min-width:0!important}
+#u4ts-root .u4ts-context{background:#f3f5f8!important;border-top:4px solid #286586!important}
+#u4ts-root .u4ts-introgrid{display:grid!important;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)!important;gap:14px!important;margin-top:14px!important}
+#u4ts-root .u4ts-intro h3{color:#282347!important;font-size:21px!important;border-right:4px solid #4843a8!important;padding:8px 12px!important;background:#eeedf9!important;border-radius:8px!important}
+#u4ts-root .u4ts-intro p{color:#3f4550!important;font-size:15px!important;line-height:1.85!important}
+#u4ts-root .u4ts-goal{margin-bottom:0!important;padding:10px!important;font-size:14px!important;background:#e8f2ef!important;color:#294a3f!important;border-color:#aac8bc!important}
+#u4ts-root .u4ts-road{grid-template-columns:1fr 1fr!important;gap:8px!important}
+#u4ts-root .u4ts-roadcard{display:grid!important;grid-template-columns:36px 1fr!important;align-items:center!important;text-align:right!important;min-height:74px!important;padding:9px!important;border-top:1px solid #d1d3de!important;font-size:13px!important;position:relative!important;color:#292638!important}
+#u4ts-root .u4ts-roadcard b{position:absolute!important;top:4px!important;left:5px!important;width:18px!important;height:18px!important;font-size:10px!important;background:#f1f1f5!important;color:#5a5466!important}
+#u4ts-root .u4ts-ordergrid{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:14px!important;align-items:start!important}
+#u4ts-root .u4ts-pool{display:grid!important;grid-template-columns:1fr!important;background:#f3f5f8!important;border:1px solid #c5ced8!important;margin:0!important;padding:12px!important;gap:7px!important}
+#u4ts-root .u4ts-card{display:grid!important;grid-template-columns:32px 1fr!important;gap:0 9px!important;padding:8px 10px!important;border-color:#999daa!important;min-height:58px!important}
+#u4ts-root .u4ts-card .u4ts-vector{grid-row:1 / 3!important;width:30px!important;height:30px!important;align-self:center!important}
+#u4ts-root .u4ts-card strong{font-size:14px!important;color:#292638!important}
+#u4ts-root .u4ts-card span:not(.u4ts-vector){font-size:12px!important;color:#555b65!important;line-height:1.5!important}
+#u4ts-root .u4ts-orderanswer{border-top:4px solid #4843a8!important}
+#u4ts-root .u4ts-slots{gap:11px!important;margin-top:12px!important}
+#u4ts-root .u4ts-slotbtn{min-height:49px!important;font-size:14px!important;color:#5b5d68!important}
+#u4ts-root .u4ts-slotbtn.filled{background:#e9e7fb!important;color:#302773!important;border-color:#4843a8!important}
+#u4ts-root .u4ts-slotbtn.filled::before{content:'✓ '!important}
+#u4ts-root .u4ts-assignmentgrid{display:grid!important;grid-template-columns:minmax(220px,.7fr) minmax(0,1.5fr)!important;gap:14px!important;align-items:start!important}
+#u4ts-root .u4ts-taskcard{background:#f3f5f8!important;border:1px solid #c5ced8!important;border-top:4px solid #286586!important;color:#414955!important;padding:14px!important;line-height:1.95!important}
+#u4ts-root .u4ts-taskcard strong{color:#234f67!important;margin:9px 0!important;font-size:17px!important}
+#u4ts-root .u4ts-form{margin:0!important;border-color:#b9bbc9!important;border-top:4px solid #4843a8!important}
+#u4ts-root .u4ts-formbar{flex-wrap:wrap!important;gap:8px!important;background:#eeedf9!important;color:#302773!important}
+#u4ts-root .u4ts-formbar strong{font-size:14px!important}
+#u4ts-root .u4ts-field input,#u4ts-root .u4ts-field textarea,#u4ts-root .u4ts-field select{border:1px solid #898d9b!important;border-radius:7px!important;min-height:44px!important;color:#25252f!important;font-size:14px!important;background:#fff!important}
+#u4ts-root .u4ts-field .u4ts-hasvalue{border-color:#4843a8!important;background:#faf9ff!important}
+#u4ts-root .u4ts-flabel{margin-bottom:6px!important}
+#u4ts-root .u4ts-static{font-size:13px!important;background:#f3f5f8!important;color:#4d5360!important}
+#u4ts-root .u4ts-review{border-top:4px solid #286586!important;background:#f3f5f8!important}
+#u4ts-root .u4ts-reviewbar{background:#eaf0f5!important;color:#234f67!important}
+#u4ts-root .u4ts-work{background:#fff!important;border-color:#ccd3dc!important}
+#u4ts-root .u4ts-work p{font-size:15px!important;line-height:1.85!important;color:#3f4550!important}
+#u4ts-root .u4ts-feedback,#u4ts-root .u4ts-answerpanel{border-top:4px solid #4843a8!important}
+#u4ts-root .u4ts-question-label{padding:8px 10px!important;margin-bottom:9px!important;background:#eeedf9!important;border-radius:6px!important;color:#302773!important;font-size:14px!important;line-height:1.65!important}
+#u4ts-root .u4ts-feedback .u4ts-opts,#u4ts-root .u4ts-answerpanel .u4ts-opts{display:grid!important;grid-template-columns:1fr!important}
+#u4ts-root .u4ts-feedback .u4ts-chip,#u4ts-root .u4ts-answerpanel .u4ts-chip{text-align:right!important;width:100%!important}
+#u4ts-root .u4ts-supportgrid{display:grid!important;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)!important;gap:14px!important;align-items:start!important}
+#u4ts-root .u4ts-supportgrid .u4ts-scenario{background:transparent!important;border:0!important;padding:0!important;margin:10px 0 0!important;font-size:15px!important;line-height:1.85!important;color:#3f4550!important}
+#u4ts-root .u4ts-supportgrid .u4ts-scenario strong{display:block!important;color:#234f67!important;margin-bottom:10px!important}
+#u4ts-root .u4ts-supportgrid .u4ts-picks{grid-template-columns:1fr!important}
+#u4ts-root .u4ts-pick[aria-pressed="true"] i::after{content:'✓'!important;color:#fff!important;display:block!important;text-align:center!important;font-size:12px!important;line-height:16px!important}
+#u4ts-root .u4ts-pick[aria-pressed="true"] i{box-shadow:none!important}
+#u4ts-root .u4ts-sum{gap:12px!important}
+#u4ts-root .u4ts-sumcard{display:grid!important;grid-template-columns:36px 1fr!important;gap:5px 12px!important;border-top:3px solid #4843a8!important;background:#fff!important}
+#u4ts-root .u4ts-sumcard .u4ts-vector{grid-row:1 / 3!important}
+#u4ts-root .u4ts-sumcard strong{color:#302773!important;font-size:15px!important}
+#u4ts-root .u4ts-sumcard>span:not(.u4ts-vector){grid-column:2!important;color:#4a4d59!important;font-size:14px!important;line-height:1.75!important}
+#u4ts-root .u4ts-closing{font-size:14px!important;padding:10px!important}
+#u4ts-root .u4ts-msg h3{background:#eeedf9!important;color:#302773!important;padding:10px 12px 10px 30px!important;border-radius:6px!important;margin-bottom:12px!important}
+#u4ts-root .u4ts-msg.success h3{background:#e8f2ef!important;color:#1c5e43!important}
+#u4ts-root .u4ts-msg.warning h3{background:#fff0dc!important;color:#804009!important}
+@media(max-width:760px){
+ #u4ts-root .u4ts-assignmentgrid,#u4ts-root .u4ts-introgrid,#u4ts-root .u4ts-reviewcolumns,#u4ts-root .u4ts-supportgrid{grid-template-columns:1fr!important}
+ #u4ts-root .u4ts-taskcard{line-height:1.7!important}
+ #u4ts-root .u4ts-introgrid{gap:10px!important}
+}
+@media(max-width:500px){
+ #u4ts-root .u4ts-ordergrid{grid-template-columns:1fr!important}
+ #u4ts-root .u4ts-card span:not(.u4ts-vector){font-size:13px!important}
+ #u4ts-root .u4ts-pager{justify-content:center!important}
+ #u4ts-root .u4ts-pager .u4ts-pagecount{order:-1!important;flex-basis:100%!important;text-align:center!important}
+ #u4ts-root .u4ts-gnav{justify-content:center!important}
+}
