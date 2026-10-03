@@ -25,10 +25,7 @@
   next.onclick=()=>{if(current<pages.length-1){current++;render(true);}};
   render(false);const reset=()=>{current=0;render(false);};pagers.push(reset);return reset;
  }
- // Keep the assignment brief visible while separating content from settings.
- const form=find('.u4ts-formgrid');const fields=Array.from(form.children);
- fields[1].classList.add('u4ts-settings-page');
- pager(find('.u4ts-form'),fields,['محتوى الواجب','التسليم والتقويم'],[find('#u4ts-assign'),find('#u4ts-draft')]);
+ // Keep the original Teams assignment form intact, with all controls visible.
  const reviewStep=find('[data-screen="4"]'),reviewColumns=document.createElement('div'),feedback=document.createElement('div');
  reviewColumns.className='u4ts-reviewcolumns';feedback.className='u4ts-feedback';
  const reviewChildren=Array.from(reviewStep.children);reviewStep.append(reviewColumns);
@@ -94,9 +91,6 @@
  orderGrid.className='u4ts-ordergrid';path.className='u4ts-orderanswer';order.insertBefore(orderGrid,orderNodes[1]);
  orderGrid.append(orderNodes[1],path);path.append(orderNodes[2],orderNodes[3]);
  root.querySelectorAll('.u4ts-card[data-key]').forEach(card=>card.prepend(icon(card.dataset.key)));
- // Assignment: keep the brief next to the fields rather than above a long form.
- const assignment=q('[data-screen="3"]'),brief=q('.u4ts-taskcard'),form=q('.u4ts-form'),assignmentGrid=document.createElement('div');
- assignmentGrid.className='u4ts-assignmentgrid';assignment.insertBefore(assignmentGrid,brief);assignmentGrid.append(brief,form);brief.prepend(icon('assign'));
  q('#u4ts-assign-reset').classList.add('u4ts-minor');
  // Feedback, reading, and Reflect use identical context/answer containers.
  q('.u4ts-feedback').prepend(panelLabel('الإجابة والإجراء'));
