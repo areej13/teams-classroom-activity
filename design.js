@@ -2,44 +2,18 @@
  'use strict';
  const root=document.getElementById('u4ts-root');
  const find=s=>root.querySelector(s);
- const pagers=[];
- function pager(container,pages,labels,actions){
-  let current=0;
-  const nav=document.createElement('div');nav.className='u4ts-pager';
-  const prev=document.createElement('button'),next=document.createElement('button'),count=document.createElement('span');
-  prev.type=next.type='button';prev.className=next.className='u4ts-btn sec';
-  prev.textContent='الجزء السابق';next.textContent='الجزء التالي';count.className='u4ts-pagecount';count.setAttribute('aria-live','polite');
-  nav.append(prev,count,next);container.append(nav);
-  const inlineActions=(actions||[]).filter(a=>a.tagName==='DIV'&&a.parentElement===container);
-  inlineActions.forEach(a=>nav.append(a));
-  pages.forEach(p=>p.classList.add('u4ts-page'));
-  function render(focus){
-   pages.forEach((p,i)=>{p.hidden=i!==current;p.setAttribute('data-paged-hidden',String(i!==current));});
-   count.textContent='الجزء '+(current+1)+' من '+pages.length+' — '+labels[current];
-   prev.disabled=current===0;next.disabled=current===pages.length-1;
-   next.hidden=inlineActions.length>0&&current===pages.length-1;
-   (actions||[]).forEach(a=>a.setAttribute('data-paged-hidden',String(current!==pages.length-1)));
-   if(focus){count.tabIndex=-1;count.focus({preventScroll:true});}
-  }
-  prev.onclick=()=>{if(current>0){current--;render(true);}};
-  next.onclick=()=>{if(current<pages.length-1){current++;render(true);}};
-  render(false);const reset=()=>{current=0;render(false);};pagers.push(reset);return reset;
- }
  // Keep the original Teams assignment form intact, with all controls visible.
  const reviewStep=find('[data-screen="4"]'),reviewColumns=document.createElement('div'),feedback=document.createElement('div');
  reviewColumns.className='u4ts-reviewcolumns';feedback.className='u4ts-feedback';
  const reviewChildren=Array.from(reviewStep.children);reviewStep.append(reviewColumns);
  reviewColumns.append(reviewChildren[1],feedback);reviewChildren.slice(2).forEach(p=>feedback.append(p));
- const feedbackParts=Array.from(feedback.children),feedbackChoice=document.createElement('div'),feedbackAction=document.createElement('div');
- feedbackChoice.append(feedbackParts[0],feedbackParts[1]);feedbackAction.append(feedbackParts[2],feedbackParts[3]);
- feedback.prepend(feedbackChoice,feedbackAction);
- pager(feedback,[feedbackChoice,feedbackAction],['التغذية الراجعة','الإجراء المناسب'],[feedbackParts[4]]);
- // Split reading support and Reflect without losing selections.
+ // Keep feedback and action choices together.
  const support=find('[data-screen="5"]');const parts=Array.from(support.children);
  const reading=document.createElement('div'),reflect=document.createElement('div');
  support.insertBefore(reading,parts[1]);support.insertBefore(reflect,parts[3]);
  reading.append(parts[1],parts[2]);parts.slice(3,-1).forEach(p=>reflect.append(p));
- pager(support,[reading,reflect],['القارئ الشامل','ريفلكت'],[parts[parts.length-1]]);
+ reading.className=reflect.className='u4ts-supportsection';
+ const supportPair=document.createElement('div');supportPair.className='u4ts-supportpair';support.insertBefore(supportPair,reading);supportPair.append(reading,reflect);
  // Every SVG represents only the supplied training data, without invented trends.
  const charts=[
   '<svg viewBox="0 0 280 84" role="img" aria-label="6 من 28 لديهم تسليم متأخر، و4 طلبة غير نشطين"><path d="M12 24H268M12 60H268" stroke="#e7e4e9" stroke-width="14"/><path d="M213 24H268" stroke="#a34d0c" stroke-width="14"/><path d="M231 60H268" stroke="#a34d0c" stroke-width="14"/><text x="12" y="15">6 / 28 — تسليم متأخر</text><text x="12" y="50">4 / 28 — غير نشطين</text></svg>',
@@ -52,13 +26,8 @@
  const rows=Array.from(root.querySelectorAll('[data-group="decisions"] .u4ts-row'));
  const mapping=[3,0,2,1];rows.forEach((row,i)=>{const answers=document.createElement('div');answers.className='u4ts-answerbox';while(row.firstChild)answers.append(row.firstChild);row.append(cards[mapping[i]],answers);});
  const insights=find('.u4ts-ins');insights.insertBefore(find('[data-group="decisions"]'),find('.u4ts-caption'));
- const decisions=find('[data-screen="6"]');
- const resetDecisionPager=pager(decisions,rows,['الدرجات','الواجبات والنشاط','ريفلكت','تقدّم القراءة'],[find('[data-check="decisions"]').parentElement]);
- find('[data-screen="6"] .u4ts-task p').textContent='اقرأ المؤشر واختر القرار المناسب بجواره، ثم انتقل إلى المؤشر التالي. تحقّق من إجاباتك بعد المؤشر الرابع.';
- find('[data-screen="5"] .u4ts-task p').textContent='اختر إعدادات القراءة، ثم انتقل إلى جزء ريفلكت. تحقّق من إجاباتك في نهاية الجزأين.';
- find('#u4ts-restart').addEventListener('click',()=>pagers.forEach(reset=>reset()));
- // Show validation errors in their own panel on the next attempt.
- find('[data-reset="decisions"]').addEventListener('click',resetDecisionPager);
+ find('[data-screen="6"] .u4ts-task p').textContent='اقرأ المؤشرات واختر لكل مؤشر القرار المناسب من الخيارات الظاهرة معه، ثم اضغط «تحقّق من المطابقة».';
+ find('[data-screen="5"] .u4ts-task p').textContent='اقرأ الموقفين واختر الإجابات المناسبة من الخيارات الظاهرة، ثم اضغط «تحقّق».';
  // A compact frame and a genuine full screen option; browser permission comes from the click.
  const expand=document.createElement('button');expand.type='button';expand.className='u4ts-sound';expand.textContent='⛶ تكبير النشاط';expand.setAttribute('aria-label','عرض النشاط بملء الشاشة');
  find('.u4ts-user').prepend(expand);
@@ -94,10 +63,10 @@
  q('#u4ts-assign-reset').classList.add('u4ts-minor');
  // Feedback, reading, and Reflect use identical context/answer containers.
  q('.u4ts-feedback').prepend(panelLabel('الإجابة والإجراء'));
- root.querySelectorAll('[data-screen="5"] > .u4ts-page').forEach(page=>{
+ root.querySelectorAll('[data-screen="5"] .u4ts-supportsection').forEach(page=>{
   const children=Array.from(page.children),context=document.createElement('div'),answers=document.createElement('div');
-  page.classList.add('u4ts-supportgrid');context.className='u4ts-context';answers.className='u4ts-answerpanel';
-  context.append(icon('support'),children[0]);children.slice(1).forEach(el=>answers.append(el));answers.prepend(panelLabel('اختياراتك'));page.append(context,answers);
+  page.classList.add('u4ts-supportstack');context.className='u4ts-context';answers.className='u4ts-answerpanel';
+  children[0].querySelector('strong').textContent=children[0].querySelector('strong').textContent.replace(/الجزء (الأول|الثاني) — /,'');context.append(children[0]);children.slice(1).forEach(el=>answers.append(el));answers.prepend(panelLabel('اختياراتك'));page.append(context,answers);
  });
  // Summary repeats the same vector cues used in the activity.
  ['team','assign','post','support','chart'].forEach((name,i)=>{const card=q('.u4ts-sum').children[i];card.prepend(icon(name));});
