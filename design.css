@@ -1,0 +1,100 @@
+/* Clear hierarchy and short, contextual tasks for embedded learning. */
+body{padding:0;background:#f3f4f8}
+#u4ts-root{--ink:#24252d!important;--muted:#545763!important;--teams:#4843a8!important;--teams-dark:#363181!important;font-family:Tahoma,Arial,sans-serif!important;line-height:1.55!important}
+#u4ts-root *{font-family:Tahoma,Arial,sans-serif!important}
+#u4ts-root .u4ts-app{border-radius:10px!important;box-shadow:none!important}
+#u4ts-root .u4ts-top{height:40px!important;background:#29264c!important}
+#u4ts-root .u4ts-brand,#u4ts-root .u4ts-user{color:#fff!important}
+#u4ts-root .u4ts-body{display:block!important}
+#u4ts-root .u4ts-nav{display:none!important}
+#u4ts-root .u4ts-main{padding:14px 18px!important;max-width:1100px!important;margin:auto!important}
+#u4ts-root .u4ts-head{align-items:center!important}
+#u4ts-root .u4ts-head h2{font-size:15px!important;color:#34343f!important;line-height:1.5!important}
+#u4ts-root .u4ts-step{font-size:12px!important;white-space:nowrap!important}
+#u4ts-root .u4ts-progress{margin-bottom:12px!important;height:4px!important}
+#u4ts-root .u4ts-task{background:#eeedf9!important;border:0!important;border-right:4px solid #4843a8!important;padding:10px 12px!important;gap:10px!important;margin-bottom:12px!important;grid-template-columns:34px 1fr!important}
+#u4ts-root .u4ts-taskicon{width:34px!important;height:34px!important;border-radius:8px!important}
+#u4ts-root .u4ts-task h3{color:#282347!important;font-size:18px!important}
+#u4ts-root .u4ts-task p{color:#484452!important;font-size:14px!important;line-height:1.6!important}
+#u4ts-root .u4ts-label,#u4ts-root .u4ts-flabel{color:#292638!important;font-size:14px!important;font-weight:700!important}
+#u4ts-root .u4ts-scenario,#u4ts-root .u4ts-taskcard{background:#f0f5f6!important;color:#303c40!important;border-color:#b8cdd0!important;font-size:14px!important;line-height:1.65!important;padding:10px 12px!important}
+#u4ts-root .u4ts-pick,#u4ts-root .u4ts-chip{background:#fff!important;color:#282932!important;border:1px solid #888b9b!important;border-radius:8px!important;font-weight:400!important;font-size:14px!important;line-height:1.6!important;min-height:44px!important}
+#u4ts-root .u4ts-pick:hover,#u4ts-root .u4ts-chip:hover{background:#f0effa!important;border-color:#4843a8!important}
+#u4ts-root .u4ts-chip[aria-pressed="true"],#u4ts-root .u4ts-pick[aria-pressed="true"]{background:#e9e7fb!important;color:#302773!important;border:2px solid #4843a8!important;font-weight:700!important;box-shadow:0 0 0 1px #4843a8!important}
+#u4ts-root .u4ts-chip[aria-pressed="true"]::before{content:'✓ '!important;font-weight:800!important}
+#u4ts-root .u4ts-btn{font-size:14px!important;padding:8px 14px!important;min-height:42px!important}
+#u4ts-root .u4ts-btn:disabled{cursor:default!important;background:#ececf1!important;color:#62616d!important;box-shadow:none!important}
+#u4ts-root button:focus-visible,#u4ts-root input:focus-visible,#u4ts-root select:focus-visible,#u4ts-root textarea:focus-visible{outline:3px solid #006c82!important;outline-offset:3px!important}
+#u4ts-root .u4ts-gnav{margin-top:12px!important;padding:10px 0 0!important;background:#fff!important;position:sticky!important;bottom:0!important;z-index:3!important}
+#u4ts-root #u4ts-restart{font-size:12px!important}
+#u4ts-root .u4ts-formgrid{grid-template-columns:1fr!important;padding:12px!important}
+#u4ts-root .u4ts-field{margin-bottom:9px!important}
+#u4ts-root .u4ts-field textarea{min-height:85px!important}
+#u4ts-root .u4ts-formbar{padding:8px 12px!important}
+#u4ts-root .u4ts-page[hidden],#u4ts-root [data-paged-hidden="true"]{display:none!important}
+#u4ts-root .u4ts-pager{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;margin:10px 0!important;padding:8px 10px!important;background:#f4f4f8!important;border:1px solid #d4d4df!important;border-radius:8px!important}
+#u4ts-root .u4ts-pagecount{font-weight:700!important;font-size:13px!important;color:#39364c!important}
+#u4ts-root .u4ts-pager button{min-height:40px!important;padding:6px 12px!important}
+#u4ts-root .u4ts-pager button[hidden]{display:none!important}
+#u4ts-root .u4ts-pager .u4ts-actions{margin:0!important}
+#u4ts-root .u4ts-pager{flex-wrap:wrap!important}
+#u4ts-root .u4ts-ins{background:#f3f3f6!important;margin-bottom:0!important}
+#u4ts-root .u4ts-instop{padding:8px 12px!important}
+#u4ts-root .u4ts-insgrid{display:none!important}
+#u4ts-root .u4ts-ins .u4ts-rows{padding:12px!important}
+#u4ts-root .u4ts-row{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)!important;gap:16px!important;border:0!important;background:transparent!important;padding:0!important}
+#u4ts-root .u4ts-row p{font-size:16px!important;color:#24232c!important;line-height:1.7!important;margin-bottom:12px!important}
+#u4ts-root .u4ts-answerbox{padding:16px!important;border:1px solid #c7c7d5!important;border-radius:10px!important;background:#fff!important}
+#u4ts-root .u4ts-answerbox::before{content:'اختر القرار التعليمي الأنسب'!important;display:block!important;font-size:12px!important;color:#5b566d!important;margin-bottom:8px!important}
+#u4ts-root .u4ts-answerbox .u4ts-opts{display:grid!important;grid-template-columns:1fr!important;gap:8px!important}
+#u4ts-root .u4ts-answerbox .u4ts-chip{text-align:right!important;width:100%!important}
+#u4ts-root .u4ts-inscard{border:1px solid #d3d3dd!important;border-top:4px solid var(--metric)!important;padding:14px!important;box-shadow:0 2px 5px #25223c0a!important}
+#u4ts-root .u4ts-inscard h4{font-size:14px!important;color:#33313e!important;margin-bottom:10px!important}
+#u4ts-root .u4ts-num strong{font-size:36px!important;color:var(--metric)!important}
+#u4ts-root .u4ts-inscard p{font-size:14px!important;font-weight:400!important;color:#484650!important;line-height:1.7!important;margin:8px 0 0!important}
+#u4ts-root .u4ts-inscard svg{display:block!important;width:100%!important;height:84px!important;margin:10px 0!important;stroke-width:2!important}
+#u4ts-root .u4ts-inscard svg text{stroke:none!important;fill:#484650!important;font-size:12px!important}
+#u4ts-root .u4ts-caption{font-size:12px!important;padding:7px 10px!important;line-height:1.5!important}
+#u4ts-root .u4ts-reviewbody{padding:10px!important}
+#u4ts-root .u4ts-work p{font-size:14px!important;line-height:1.6!important}
+#u4ts-root .u4ts-rubricnote{font-size:12px!important;line-height:1.6!important}
+#u4ts-root .u4ts-picks{gap:7px!important}
+#u4ts-root .u4ts-pick{padding:8px 10px!important}
+#u4ts-root .u4ts-intro p{font-size:15px!important;line-height:1.8!important}
+#u4ts-root .u4ts-modal{align-items:center!important;padding:16px!important}
+#u4ts-root .u4ts-msg{max-height:85vh!important}
+#u4ts-root .u4ts-card span{font-size:12px!important}
+#u4ts-root .u4ts-card{min-width:120px!important;flex-basis:120px!important;padding:8px!important}
+#u4ts-root .u4ts-slotbtn{min-height:42px!important}
+#u4ts-root .u4ts-row.ok .u4ts-answerbox{border:2px solid #217154!important}
+#u4ts-root .u4ts-row.bad .u4ts-answerbox{border:2px solid #a34d0c!important}
+#u4ts-root .u4ts-row.ok .u4ts-answerbox::after{content:'✓ إجابة صحيحة'!important;display:block!important;color:#1b6449!important;margin-top:8px!important;font-size:13px!important}
+#u4ts-root .u4ts-row.bad .u4ts-answerbox::after{content:'راجع هذا الاختيار'!important;display:block!important;color:#914309!important;margin-top:8px!important;font-size:13px!important}
+#u4ts-root .u4ts-reviewcolumns{display:grid!important;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)!important;gap:16px!important;align-items:start!important}
+#u4ts-root .u4ts-ins .u4ts-rows{padding:8px!important}
+#u4ts-root .u4ts-answerbox{padding:12px!important}
+#u4ts-root .u4ts-answerbox .u4ts-opts{gap:6px!important}
+#u4ts-root .u4ts-answerbox::before{margin-bottom:4px!important}
+#u4ts-root .u4ts-inscard svg{direction:ltr!important}
+#u4ts-root .u4ts-pager{padding:5px 8px!important;margin:8px 0!important}
+@media(min-width:700px){
+ #u4ts-root .u4ts-settings-page{display:grid!important;grid-template-columns:1fr 1fr!important;gap:0 14px!important}
+ #u4ts-root .u4ts-settings-page .u4ts-field:last-child{grid-column:1 / -1!important}
+}
+@media(max-width:650px){
+ #u4ts-root .u4ts-reviewcolumns{grid-template-columns:1fr!important}
+ #u4ts-root .u4ts-main{padding:10px!important}
+ #u4ts-root .u4ts-head h2{font-size:12px!important}
+ #u4ts-root .u4ts-head{flex-direction:row!important;align-items:center!important}
+ #u4ts-root .u4ts-row{grid-template-columns:1fr!important;gap:10px!important}
+ #u4ts-root .u4ts-inscard svg{height:60px!important}
+ #u4ts-root .u4ts-inscard{padding:10px!important}
+ #u4ts-root .u4ts-num strong{font-size:28px!important}
+ #u4ts-root .u4ts-answerbox{padding:12px!important}
+ #u4ts-root .u4ts-gnav{position:static!important}
+ #u4ts-root .u4ts-task h3{font-size:16px!important}
+ #u4ts-root .u4ts-taskicon{display:none!important}
+ #u4ts-root .u4ts-task{grid-template-columns:1fr!important}
+ #u4ts-root .u4ts-gnav div{gap:5px!important}
+ #u4ts-root #u4ts-restart{padding:7px!important}
+}
